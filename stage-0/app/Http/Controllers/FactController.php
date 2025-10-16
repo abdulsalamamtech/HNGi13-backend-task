@@ -14,7 +14,7 @@ class FactController extends Controller
         $user = $this->getUserInfo();
         $timestamp = now();
 
-        
+
         // Field specifications:
         // status — Must always be the string "success"
         // user.email — Your personal email address
@@ -23,7 +23,7 @@ class FactController extends Controller
         // timestamp — Current UTC time in ISO 8601 format (e.g., "2025-10-15T12:34:56.789Z")
         // fact — A random cat fact fetched from the Cat Facts API
         // return json response with header
-
+        info('Returning response with user info and cat fact');
         return response()->json([
             'status' => 'success',
             'user' => $user,
@@ -32,7 +32,6 @@ class FactController extends Controller
         ], 200, [
             'Content-Type' => 'application/json'
         ]);
-
     }
 
     private function getCatFact()
@@ -40,16 +39,19 @@ class FactController extends Controller
         // using laravel http client with timeout of 5 seconds, and handling failure
         $response = Http::timeout(5)->get('https://catfact.ninja/fact');
         if ($response->failed()) {
+            error_log('Failed to fetch cat fact: ' . $response->status());
             return 'Could not fetch cat fact at this time.';
         }
 
         $response = $response->json();
 
         if (!isset($response['fact'])) {
+            error_log('Invalid response from cat fact API: ' . json_encode($response));
             return 'Could not fetch cat fact at this time.';
         }
-        
+
         // return the fact from the response
+        info('Fetched cat fact.');
         return $response['fact'];
     }
 
@@ -61,6 +63,4 @@ class FactController extends Controller
             'stack' => 'PHP/Laravel'
         ];
     }
-
-
 }
