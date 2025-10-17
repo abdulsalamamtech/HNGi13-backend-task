@@ -11,14 +11,14 @@ Response structure (required fields)
 Your endpoint must return a JSON response in this exact format:
 
 {
-  "status": "success",
-  "user": {
-    "email": "<your email>",
-    "name": "<your full name>",
-    "stack": "<your backend stack>"
-  },
-  "timestamp": "<current UTC time in ISO 8601 format>",
-  "fact": "<random cat fact from Cat Facts API>"
+"status": "success",
+"user": {
+"email": "<your email>",
+"name": "<your full name>",
+"stack": "<your backend stack>"
+},
+"timestamp": "<current UTC time in ISO 8601 format>",
+"fact": "<random cat fact from Cat Facts API>"
 }
 
 Field specifications:
@@ -84,8 +84,38 @@ Submission instructions
     You’re to create a rich LinkedIn, Dev(.)to, Hashnode, Medium, or X (formerly Twitter) post on the task above detailing your work processes, what this task taught you, and supporting snapshots/images/videos of your work (important)
 
 Submission Link: https://forms.gle/cqXmjZwzRr4rchYBA
-Submission Deadline: Deadline: Sunday, 19 Oct 2025 GMT+1 (WAT)Good luck, Backend Wizards! :rocket: (edited) 
+Submission Deadline: Deadline: Sunday, 19 Oct 2025 GMT+1 (WAT)Good luck, Backend Wizards! :rocket: (edited)
 TikTok | HNG Internship
 HNG Internship
 HNGi13 backend task - stage 0
 Google DocsGoogle Docs
+
+### Submission
+
+-   Social Media Post
+
+    On this week HNG project I built a simple Laravel RESTful API endpoint that returns my profile information along with a dynamic cat fact fetched from an external API.
+
+    Check comment to see the steps I followed in archiving this project.
+
+    This task validates my ability to consume third-party APIs, format JSON responses, and return dynamic data.
+
+    I started by installing Laravel.
+    Creating the controller and route endpoint
+    The creating private methods in the controller for my information and fetching the dynamic fact.
+    The I structure everything together in the index method with response, logs and more...
+    I created a repository and push the project.
+    I deploy the project to railway.
+    Then I test the project to see how it works.
+
+-   Run the command: /stage-zero-backend - Submit
+    Your server IP (http://your-ip-address/me)
+    Your GitHub repo link
+    Your full name
+    Your email
+    Stack
+
+-   Please check Thanos bot to see the error message or success message after each attempt.
+    Deadline: Sunday, 19 Oct 2025 GMT+1 (WAT)
+
+-   Provide any relevant tests, API documentation, or notes in the repo
