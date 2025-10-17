@@ -101,12 +101,20 @@ Google DocsGoogle Docs
     This task validates my ability to consume third-party APIs, format JSON responses, and return dynamic data.
 
     I started by installing Laravel.
-    Creating the controller and route endpoint
+
+    Creating the controller and route endpoint.
+
     The creating private methods in the controller for my information and fetching the dynamic fact.
-    The I structure everything together in the index method with response, logs and more...
+
+    Then I structure everything together in the index method with response, logs and more...
+
     I created a repository and push the project.
+
     I deploy the project to railway.
+
     Then I test the project to see how it works.
+
+    Thanks.
 
 -   Run the command: /stage-zero-backend - Submit
     Your server IP (http://your-ip-address/me)
