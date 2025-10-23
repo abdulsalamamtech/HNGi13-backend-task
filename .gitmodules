@@ -1,3 +1,6 @@
 [submodule "hng-stage-0"]
 	path = hng-stage-0
 	url = https://github.com/abdulsalamamtech/hng-stage-0
+[submodule "hng-stage-1"]
+	path = hng-stage-1
+	url = git@github.com:abdulsalamamtech/hng-stage-1.git
